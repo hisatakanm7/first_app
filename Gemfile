@@ -17,6 +17,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'rspec-rails'
+gem 'capybara'
+gem 'therubyracer'
 
 # Use unicorn as the web server
 # gem 'unicorn'
