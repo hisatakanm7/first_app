@@ -1,16 +1,13 @@
 <h1>hello</h1>
 
-<%= form_for(@user) do |f| %>
+<%= form_tag('/users/about', {:method => 'get'}) { %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= text_field_tag(:name, params[:name]) %>
+  <%= text_field_tag(:email, params[:email]) %>
+  <%= text_field_tag(:password, params[:password]) %>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
 
-  <%= f.label :password %>
-  <%= f.text_field :password %>
+<%= submit_tag(users_about_path, :class => 'btn') %>
 
-  <%= f.submit "create my account", class: "zbtn btn-large btn-primary" %>
 
-<% end %>
+<% } %>
